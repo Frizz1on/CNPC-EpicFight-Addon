@@ -8,13 +8,13 @@
     "ICustomMobPatchProvider",
     "MixinCapabilityDispatcher2",
     "MixinCapabilityProvider",
-    "MixinClientConfig",
     "MixinDataDisplay",
     "MixinEntityLivingWrapper",
     "MixinEntityNpcInterface",
     "MixinNPCWrapper"
   ],
   "client": [
+    "MixinClientConfig",
     "IMixinRenderEngine",
     "MixinGuiCreationEntities",
     "MixinLayerHeadwear",
