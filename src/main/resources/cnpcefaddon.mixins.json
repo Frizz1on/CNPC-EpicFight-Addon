@@ -6,12 +6,17 @@
   "mixins": [
     "ICustomHumanoidMobPatchProvider",
     "ICustomMobPatchProvider",
+    "MixinAnimatedAttackGoal",
     "MixinCapabilityDispatcher2",
     "MixinCapabilityProvider",
     "MixinDataDisplay",
+    "MixinEntityAIAttackTarget",
+    "MixinEntityAIRangedAttack",
     "MixinEntityLivingWrapper",
+    "MixinLivingEntityPatch",
     "MixinEntityNpcInterface",
-    "MixinNPCWrapper"
+    "MixinNPCWrapper",
+    "MixinTargetChasingGoal"
   ],
   "client": [
     "MixinClientConfig",

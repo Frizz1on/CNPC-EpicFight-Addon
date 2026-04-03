@@ -5,8 +5,7 @@ import yesman.epicfight.api.model.Armature;
 import yesman.epicfight.world.capabilities.entitypatch.EntityPatch;
 
 public interface INpcPatchProvider {
+   void setArmature(Armature var1);
 
-    void setArmature(Armature armature);
-
-    EntityPatch<?> get(Entity entity);
+   EntityPatch<?> get(Entity var1);
 }

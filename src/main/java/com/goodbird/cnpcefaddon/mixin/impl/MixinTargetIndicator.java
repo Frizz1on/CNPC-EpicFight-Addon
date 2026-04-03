@@ -10,12 +10,18 @@ import yesman.epicfight.client.gui.TargetIndicator;
 import yesman.epicfight.client.world.capabilites.entitypatch.player.LocalPlayerPatch;
 import yesman.epicfight.world.capabilities.entitypatch.LivingEntityPatch;
 
-@Mixin(TargetIndicator.class)
+@Mixin({TargetIndicator.class})
 public class MixinTargetIndicator {
-    @Inject(method = "shouldDraw", at=@At("RETURN"), cancellable = true, remap = false)
-    public void shouldDraw(LivingEntity entityIn, LivingEntityPatch<?> entitypatch, LocalPlayerPatch playerpatch, CallbackInfoReturnable<Boolean> cir) {
-        if(Minecraft.getInstance().screen!=null){
-            cir.setReturnValue(false);
-        }
-    }
+   @Inject(
+      method = {"shouldDraw"},
+      at = {@At("RETURN")},
+      cancellable = true,
+      remap = false
+   )
+   public void shouldDraw(LivingEntity entityIn, LivingEntityPatch<?> entitypatch, LocalPlayerPatch playerpatch, float partialTicks, CallbackInfoReturnable<Boolean> cir) {
+      if (Minecraft.getInstance().screen != null) {
+         cir.setReturnValue(false);
+      }
+
+   }
 }

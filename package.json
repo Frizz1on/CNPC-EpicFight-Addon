@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "@sourcegraph/amp": "^0.0.1774829165-g4f37d2"
+  }
+}
